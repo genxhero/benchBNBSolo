@@ -5,3 +5,21 @@
   color: red;
   text-shadow: 1px 1px black;
 }
+
+.login-links {
+  display: flex;
+}
+
+.head-link {
+  margin: 5px;
+  border: 1px solid black;
+  text-decoration: none;
+  box-shadow: 2px 2px black;
+  text-align:  center;
+  padding: 5px;
+}
+
+.head-link:hover {
+  color: yellow;
+  background: black;
+}
