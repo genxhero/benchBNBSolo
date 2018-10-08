@@ -7,5 +7,5 @@ document.addEventListener('DOMContentLoaded', () =>  {
   window.logout = logout;
   window.signup = signup;
   const root = document.getElementById('root');
-  ReactDOM.render(<h1>Welcome to BenchBnB</h1>, root);
+  ReactDOM.render(<h1>Hello, react dom</h1>, root);
 });

@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.logout = _util_session_api_util__WEBPACK_IMPORTED_MODULE_2__["logout"];
   window.signup = _util_session_api_util__WEBPACK_IMPORTED_MODULE_2__["signup"];
   var root = document.getElementById('root');
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Welcome to BenchBnB"), root);
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Hello, react dom"), root);
 });
 
 /***/ }),
