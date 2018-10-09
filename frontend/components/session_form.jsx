@@ -12,7 +12,13 @@ class SessionForm extends React.Component {
       username: "",
       password: ""
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
+  update(field) {
+  return event => this.setState({
+    [field]: event.currentTarget.value
+  });
+}
 
   handleSubmit(event) {
     event.preventDefault();
@@ -37,6 +43,21 @@ class SessionForm extends React.Component {
    return (
    <div className="session-form-container">
      <h3 className="form-header">{currentPage}</h3>
+     <br></br>
+     <form onSubmit={this.handleSubmit} className="session-form">
+       <label className="form-label">Username
+        <input type="text"
+          value={this.state.username}
+          onChange={this.update('username')}/>
+       </label>
+       <label className="form-label">Password
+           <input type="password"
+             value={this.state.password}
+             onChange={this.update('password')}/>
+       </label>
+       <input className="submission" type="submit" value={currentPage} />
+     </form>
+     <br></br>
      <Link className="head-link" to={`${formUrl}`}>{formString} Instead</Link>
    </div>
    );

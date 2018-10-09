@@ -9,7 +9,7 @@ class Api::SessionsController < ApplicationController
     )
     if @user
       login(@user)
-      render :show
+      render "/api/users/show"
     else
         render json: ["Invalid Credentials"], status: 401
     end
@@ -17,11 +17,11 @@ class Api::SessionsController < ApplicationController
 
   def destroy
 
-    if logged_in
+    if logged_in?
       logout
-      render {}
+     render json: {}
     else
-      render json: { error: error.message }, status: 404
+      render json: ["Nobody signed in"], status: 404
     end
   end
 

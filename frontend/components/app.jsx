@@ -3,6 +3,7 @@ import GreetingContainer from './greeting_container';
 import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
 import { Route, Redirect, Switch, Link,HashRouter } from 'react-router-dom';
+import {AuthRoute} from '../util/route_util';
 
 
 const App = () => (
@@ -11,8 +12,8 @@ const App = () => (
         <h1>Welcome to Bench BnB</h1>
         <GreetingContainer/>
     </header>
-   <Route path="/login" component={LoginFormContainer} />
-   <Route path="/signup" component={SignupFormContainer} />
+   <AuthRoute path="/login" component={LoginFormContainer} />
+   <AuthRoute path="/signup" component={SignupFormContainer} />
   </div>
 );
 

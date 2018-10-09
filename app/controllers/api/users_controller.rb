@@ -10,13 +10,14 @@ class Api::UsersController < ApplicationController
       login(@user)
       render :show
     else
-      render json: { error: error.message }, "Username Already Exists", status: 422
+    render json: @user.errors.full_messages, status: 422
     end
   end
 
-    def show
-      render :show(params[:id])
-    end
+  def show
+    @user = User.find(params[:id])
+    render :show
+  end
 
   def user_params
     params.require(:user).permit(:username, :password)
